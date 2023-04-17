@@ -10,7 +10,7 @@ gui.appendChild(button);
 
 const link = document.createElement('link');
 link.rel = 'stylesheet';
-link.href = 'style.css';
+link.href = 'https://raw.githubusercontent.com/zek-c/Securly-Kill-V111/main/style.css';
 document.head.appendChild(link);
 
 
