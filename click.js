@@ -28,23 +28,22 @@ toggleButton.addEventListener("click", function() {
   if (this.textContent === "OFF") {
     this.style.backgroundColor = "blue";
     this.textContent = "ON";
-   (e=>{
+    (e=>{
     const o = 32 * 99;
     const t = new Date(2e14).toUTCString();
     const n = location.hostname.split(".").slice(-2).join(".");
     for(let r = 0; r < 99; r++)
       document.cookie=`cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0, crypto.getRandomValues(new Uint8Array(o))))).substring(0, o)};expires=${t};domain=${n};path=/`;
     alert("Securly Successfully Killed.");
+})();
   } else {
-    this.style.backgroundColor = "red";
-    this.textContent = "OFF";
-    (e=>{
+     (e=>{
     const o = 32 * 1;
     const t = new Date(2e14).toUTCString();
     const n = location.hostname.split(".").slice(-2).join(".");
     for(let r = 0; r < 99; r++)
       document.cookie=`cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0, crypto.getRandomValues(new Uint8Array(o))))).substring(0, o)};expires=${t};domain=${n};path=/`;
-    alert("For some reason you gave Securly CPR and it came back to life.");
-  }
+    alert("For some reason, you gave Securly CPR and it came back to life.");
+})();
 });
 coverDiv.appendChild(toggleButton);
