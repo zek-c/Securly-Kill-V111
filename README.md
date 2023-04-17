@@ -14,7 +14,7 @@ step 3. go to [Securly 🤓](https://securly.com)
 
 <hr>
 
-step 4. click the bookmark and type "99"
+step 4. click the bookmark and an "OFF" button will appear. Click this and it will turn on the Securly killer (Which last forever, no need to re enable) and Click it again to turn it off.
 
 <hr>
 
