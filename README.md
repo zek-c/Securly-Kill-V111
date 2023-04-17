@@ -2,7 +2,7 @@ Hello ur prob here to disable dumb extensions. lucky for you i have delivered.
 
 <hr>
 
-step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v11-kill)
+step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/blob/main/bookmarklet.js)
 
 <hr>
 
