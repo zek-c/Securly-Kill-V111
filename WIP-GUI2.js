@@ -1,26 +1,31 @@
 // Define the CSS styles as a string
 const css = `
   .draggable {
-    position: absolute;
+    position: fixed;
     z-index: 9;
     background-color: white;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 60px;
-    height: 75px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px; /* Sets the border radius to 10px */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
   }
 
   button {
-    width: 60px; /* Sets the button width to 20px */
-    height: 75px; /* Sets the button height to 35px */
+    width: 100%;
+    height: 90%;
     display: block;
-    margin: auto; /* Centers the button horizontally and vertically */
-  background-image: url('https://github.com/zek-c/about-blank-website/blob/main/Untitled%20design.png?raw=true');}
+    margin: auto;
+    font-size: 8em;
+    color: red;
+    background-image: url('https://github.com/zek-c/about-blank-website/blob/main/Untitled%20design.png');
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 // Create a new style element and append the CSS to it
@@ -62,8 +67,8 @@ function elementDrag(event) {
   pos2 = pos4 - event.clientY;
   pos3 = event.clientX;
   pos4 = event.clientY;
-  gui.style.top = (gui.offsetTop - pos2) + 'px';
-  gui.style.left = (gui.offsetLeft - pos1) + 'px';
+  gui.style.top = gui.offsetTop - pos2 + 'px';
+  gui.style.left = gui.offsetLeft - pos1 + 'px';
 }
 
 function closeDragElement() {
