@@ -1,3 +1,4 @@
+// you dont want this you want the bookmarklet. go back pls
 const coverDiv = document.createElement("div");
 coverDiv.style.position = "fixed";
 coverDiv.style.top = "0";
