@@ -17,7 +17,7 @@ toggleButton.style.transform = "translate(-50%, -50%)";
 toggleButton.style.width = "200px";
 toggleButton.style.height = "50px";
 toggleButton.style.borderRadius = "25px";
-toggleButton.style.backgroundColor = "gray";
+toggleButton.style.backgroundColor = "red";
 toggleButton.style.color = "white";
 toggleButton.style.fontSize = "20px";
 toggleButton.style.fontWeight = "bold";
@@ -31,7 +31,7 @@ toggleButton.addEventListener("click", function() {
     // Code to run when button is on
     console.log("Button is ON");
   } else {
-    this.style.backgroundColor = "gray";
+    this.style.backgroundColor = "red";
     this.textContent = "OFF";
     // Code to run when button is off
     console.log("Button is OFF");
