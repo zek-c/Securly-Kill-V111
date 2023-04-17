@@ -1,4 +1,4 @@
-Hello ur prob here to disable dumb extensions. lucky for you i have delivered. 
+Hello ur prob here to disable dumb "secure"ly. lucky for you i have delivered. 
 
 <hr>
 
