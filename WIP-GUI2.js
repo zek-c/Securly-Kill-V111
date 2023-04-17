@@ -20,7 +20,7 @@ const css = `
     height: 75px; /* Sets the button height to 35px */
     display: block;
     margin: auto; /* Centers the button horizontally and vertically */
-  }
+  background-image: url('https://github.com/zek-c/about-blank-website/blob/main/Untitled%20design.png?raw=true');}
 `;
 
 // Create a new style element and append the CSS to it
