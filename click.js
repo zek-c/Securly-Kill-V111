@@ -1,12 +1,12 @@
 // you dont want this you want the bookmarklet. go back pls
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
-// loop through each div and remove it from the page
+
 elementsToRemove.forEach(function(element) {
   element.remove();
 });
 
-// get the buttons with class name "slick-next.slick-arrow.slick-disabled" and "slick-prev.slick-arrow.slick"
+
 const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick");
 const coverIframe = document.createElement("iframe");
 coverIframe.style.position = "fixed";
@@ -15,7 +15,7 @@ coverIframe.style.left = "0";
 coverIframe.style.width = "100%";
 coverIframe.style.height = "100%";
 coverIframe.style.border = "none";
-coverIframe.style.backgroundColor = "white"; // set the background color of the iframe to white
+coverIframe.style.backgroundColor = "white"; 
 document.body.appendChild(coverIframe);
 
 const toggleButton = document.createElement("button");
