@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pull the Plug on Securly</title>
+    <style type="text/css">
+        body {
+            background-image: url('https://static.wikia.nocookie.net/backrooms/images/6/6a/IntegerroomsBackground.gif/revision/latest/smart/width/250/height/250?cb=20220720045525');
+            background-size: cover;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .drag {
+            font-size: 24px;
+            margin: 50px auto;
+            padding: 10px;
+            text-align: center;
+            border: 2px dashed #fff;
+            width: 250px;
+            cursor: move;
+        }
+
+        .drag:hover {
+            border: 2px dashed #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The place where Securly comes to die</h1>
+    </header>
+
+    <p>Copy the bookmarklet below</p>
+
+    <div class="drag">
+        Drag To Bookmarks
+        <script type="text/javascript">
+            (function() {
+                var url = window.location.href;
+                var title = document.title;
+                var bookmark = '<a href="' + url + '">' + title + '</a>';
+                alert("Drag this link to your bookmarks bar: " + bookmark);
+            })();
+        </script>
+    </div>
+</body>
+</html>
