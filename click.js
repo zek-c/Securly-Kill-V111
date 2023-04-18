@@ -7,7 +7,7 @@ elementsToRemove.forEach(function(element) {
 });
 
 
-const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick");
+const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled");
 const coverIframe = document.createElement("iframe");
 coverIframe.style.position = "fixed";
 coverIframe.style.top = "0";
