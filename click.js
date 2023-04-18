@@ -1,4 +1,5 @@
-// you dont want this you want the bookmarklet. go back pls
+// go to bookmarklets, thats whatcha want
+if (window.location.href.indexOf("securly") > -1) {
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
 
@@ -58,3 +59,7 @@ toggleButton.addEventListener("click", function() {
 });
 
 coverIframe.contentDocument.body.appendChild(toggleButton);
+} else {
+alert("you gotta be on securly.com");
+
+}
