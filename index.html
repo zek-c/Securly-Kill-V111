@@ -29,15 +29,47 @@
             text-align: center;
         }
 
-        .drag {
-            font-size: 24px;
-            margin: 50px auto;
-            padding: 10px;
-            text-align: center;
-            border: 2px dashed #fff;
-            width: 250px;
-            cursor: move;
-        }
+        
+        .button {
+	position: relative;
+	width: 230px;
+	height: 47px;
+	border: 1px solid rgb(95, 99, 104);
+	color: rgb(138, 180, 248);
+	background: rgba(138, 180, 248, 0.08);
+	border-radius: 6px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	user-select: none;
+        font-weight: 500;
+}
+
+        .button:active {
+	background: rgba(138, 180, 248, 0.25);
+}
+
+.button-text {
+	opacity: 0;
+	user-select: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.button-note {
+	margin: 0 auto;
+	text-align: center;
+	color: rgb(138, 180, 248);
+	width: 300px;
+	user-select: none;
+}
 
         .drag:hover {
             border: 2px dashed #00ff00;
