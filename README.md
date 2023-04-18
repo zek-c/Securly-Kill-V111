@@ -2,7 +2,7 @@ Hello ur prob here to disable dumb "secure"ly. lucky for you i have delivered.
 
 <hr>
 
-step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/blob/main/bookmarklet.js)
+step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/blob/main/bookmarklet.js) or go to [My Website](https://killcurly.netlify.app) for easy drag and drop to bookmarks bar
 
 <hr>
 
