@@ -1,49 +1,51 @@
-// Define the HTML code as a string
-var html = `
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Image Change on Click</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			background-color: #f2f2f2;
-		}
+// create a div element to hold the overlay
+const overlay = document.createElement('div');
+overlay.style.position = 'fixed';
+overlay.style.top = '0';
+overlay.style.left = '0';
+overlay.style.width = '100%';
+overlay.style.height = '100%';
+overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+overlay.style.zIndex = '9999';
 
-		img {
-			width: 300px;
-			height: 300px;
-			cursor: pointer;
-		}
-	</style>
-</head>
-<body>
-	<img id="myImg" src="image1.jpg">
-	<script>
-		var img = document.getElementById("myImg");
-		var imageIndex = 1;
-		var images = ["image1.jpg", "image2.jpg"];
+// create the two image elements
+const imageOne = document.createElement('img');
+imageOne.src = 'image-one.jpg';
+imageOne.style.position = 'absolute';
+imageOne.style.top = '50%';
+imageOne.style.left = '50%';
+imageOne.style.transform = 'translate(-50%, -50%)';
 
-		img.addEventListener("click", function() {
-			imageIndex++;
-			if (imageIndex >= images.length) {
-				imageIndex = 0;
-			}
-			img.src = images[imageIndex];
-		});
-	</script>
-</body>
-</html>
-`;
+const imageTwo = document.createElement('img');
+imageTwo.src = 'image-two.jpg';
+imageTwo.style.position = 'absolute';
+imageTwo.style.top = '50%';
+imageTwo.style.left = '50%';
+imageTwo.style.transform = 'translate(-50%, -50%)';
+imageTwo.style.display = 'none'; // hide imageTwo by default
 
-// Create a new HTML document using the HTML code
-var doc = document.implementation.createHTMLDocument();
-doc.documentElement.innerHTML = html;
+// add the image elements to the overlay
+overlay.appendChild(imageOne);
+overlay.appendChild(imageTwo);
 
-// Append the new document to the current document's body
-document.body.appendChild(doc.documentElement);
+// add the overlay to the document body
+document.body.appendChild(overlay);
+
+// add an event listener to the top middle of the overlay
+overlay.addEventListener('click', function(event) {
+  const rect = imageOne.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  if (event.clientX >= centerX - 50 && event.clientX <= centerX + 50 && event.clientY <= rect.top) {
+    if (imageOne.style.display === 'none') {
+      // switch back to imageOne and run code one
+      imageOne.style.display = 'block';
+      imageTwo.style.display = 'none';
+      console.log('Code one running...');
+    } else {
+      // switch to imageTwo and run code two
+      imageOne.style.display = 'none';
+      imageTwo.style.display = 'block';
+      console.log('Code two running...');
+    }
+  }
+});
