@@ -1,13 +1,22 @@
 // you dont want this you want the bookmarklet. go back pls
-const coverDiv = document.createElement("div");
-coverDiv.style.position = "fixed";
-coverDiv.style.top = "0";
-coverDiv.style.left = "0";
-coverDiv.style.width = "100%";
-coverDiv.style.height = "100%";
-coverDiv.style.backgroundColor = "white";
-document.body.appendChild(coverDiv);
+const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
+// loop through each div and remove it from the page
+elementsToRemove.forEach(function(element) {
+  element.remove();
+});
+
+// get the buttons with class name "slick-next.slick-arrow.slick-disabled" and "slick-prev.slick-arrow.slick"
+const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick");
+const coverIframe = document.createElement("iframe");
+coverIframe.style.position = "fixed";
+coverIframe.style.top = "0";
+coverIframe.style.left = "0";
+coverIframe.style.width = "100%";
+coverIframe.style.height = "100%";
+coverIframe.style.border = "none";
+coverIframe.style.backgroundColor = "white"; // set the background color of the iframe to white
+document.body.appendChild(coverIframe);
 
 const toggleButton = document.createElement("button");
 toggleButton.style.position = "fixed";
@@ -48,4 +57,4 @@ toggleButton.addEventListener("click", function() {
   }
 });
 
-coverDiv.appendChild(toggleButton);
+coverIframe.contentDocument.body.appendChild(toggleButton);
