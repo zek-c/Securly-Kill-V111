@@ -10,14 +10,14 @@ overlay.style.zIndex = '9999';
 
 // create the two image elements
 const imageOne = document.createElement('img');
-imageOne.src = 'image-one.jpg';
+imageOne.src = 'https://res.cloudinary.com/dxttxbdrd/image/upload/v1681826472/Untitled42_20230418070104_oqqjjn.png';
 imageOne.style.position = 'absolute';
 imageOne.style.top = '50%';
 imageOne.style.left = '50%';
 imageOne.style.transform = 'translate(-50%, -50%)';
 
 const imageTwo = document.createElement('img');
-imageTwo.src = 'image-two.jpg';
+imageTwo.src = 'https://res.cloudinary.com/dxttxbdrd/image/upload/v1681826909/IMG_0833_a6bvyw.jpg';
 imageTwo.style.position = 'absolute';
 imageTwo.style.top = '50%';
 imageTwo.style.left = '50%';
