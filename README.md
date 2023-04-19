@@ -19,5 +19,5 @@ step 4. click the bookmark and an "OFF" button will appear. Click this and it wi
 
 <hr>
 
-This will hard disable securly. It wont disable the extension, but corrupt the cookies. it will remove the blocking string it adds to the source code of websites it blocks.
+This will hard disable securly. It wont disable the extension, but corrupt the cookies. it will remove the blocking string it adds to the source code of websites it blocks. it sets the cookies to expire in like the year 5000 so you clearly wont ever need to enabke this again unless you clear ur cookies
 <hr>
