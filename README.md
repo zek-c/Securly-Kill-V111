@@ -1,3 +1,4 @@
+<hr>
 Hello ur prob here to disable dumb "secure"ly. lucky for you i have delivered. 
 
 <hr>
@@ -19,3 +20,4 @@ step 4. click the bookmark and an "OFF" button will appear. Click this and it wi
 <hr>
 
 This will hard disable securly. It wont disable the extension, but corrupt the cookies. it will remove the blocking string it adds to the source code of websites it blocks.
+<hr>
