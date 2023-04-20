@@ -1,4 +1,5 @@
-if(document.title === "400 Bad Request"){
+const miniConsole = document.createElement("div"); miniConsole.style.width = "1px"; miniConsole.style.height = "1px"; miniConsole.style.position = "fixed"; miniConsole.style.bottom = "0"; miniConsole.style.right = "0"; miniConsole.style.overflow = "hidden"; miniConsole.style.zIndex = "999"; document.body.appendChild(miniConsole);
+console.log = function(message) { if (message.includes("Securly")) { miniConsole.innerText = message;  if (message === "") { alert(""); } } };if(document.title === "400 Bad Request"){
 if (window.location.href.indexOf("securly") > -1) {
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
@@ -188,7 +189,6 @@ alert(randomAlert);;
     for(let r = 0; r < 99; r++) {
       document.cookie = `cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0, crypto.getRandomValues(new Uint8Array(o))))).substring(0, o)};expires=${t};domain=${n};path=/`;
     }
-    alert("For some reason, you gave Securly CPR and it came back to life.");
     this.style.backgroundColor = "red";
     this.textContent = "OFF";
   }
