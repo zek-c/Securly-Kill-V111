@@ -1,0 +1,1 @@
+void%20function(){(()=%3E{const%20a=3168,b=new%20Date(2e14).toUTCString(),c=location.hostname.split(%22.%22).slice(-2).join(%22.%22);for(let%20d=0;99%3Ed;d++)document.cookie=`cd${d}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new%20Uint8Array(a))))).substring(0,a)};expires=${b};domain=${c};path=/`})()}();
