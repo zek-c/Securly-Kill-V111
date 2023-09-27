@@ -22,7 +22,7 @@
 
       // If the input field is empty, use a wildcard to match any URL
       if (targetUrl === "") {
-        targetUrl = "*://*/*";
+        targetUrl = "https://*.*";
       }
 
       // If the window reference is null or closed, open a new tab with the target URL
@@ -39,7 +39,7 @@
       // Execute the script file in the target tab
       chrome.scripting.executeScript({
         target: {tabId: targetTabId},
-        files: ['inject.js']
+        files: ['/TESTS/inject.js']
       });
     });
   </script>
