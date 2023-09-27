@@ -1,0 +1,47 @@
+<html>
+<head>
+  <script src="background.js"></script>
+</head>
+<body>
+  <h1>Tab Injector</h1>
+  <p>Enter the URL of the tab you want to inject JavaScript into, or leave it blank to target the only other tab.</p>
+  <input type="text" id="url" placeholder="https://example.com">
+  <button id="inject">Inject</button>
+  <script>
+    // Get the elements
+    let url = document.getElementById("url");
+    let inject = document.getElementById("inject");
+
+    // Initialize a global variable to store the window reference
+    let windowObjectReference = null;
+
+    // Add a click listener to the inject button
+    inject.addEventListener("click", function() {
+      // Get the value of the input field
+      let targetUrl = url.value;
+
+      // If the input field is empty, use a wildcard to match any URL
+      if (targetUrl === "") {
+        targetUrl = "*://*/*";
+      }
+
+      // If the window reference is null or closed, open a new tab with the target URL
+      if (windowObjectReference === null || windowObjectReference.closed) {
+        windowObjectReference = window.open(targetUrl, "SingleSecondaryWindowName");
+      } else {
+        // Otherwise, focus on the existing tab
+        windowObjectReference.focus();
+      }
+
+      // Get the tab ID of the window reference
+      let targetTabId = windowObjectReference.tabId;
+
+      // Execute the script file in the target tab
+      chrome.scripting.executeScript({
+        target: {tabId: targetTabId},
+        files: ['inject.js']
+      });
+    });
+  </script>
+</body>
+</html>
