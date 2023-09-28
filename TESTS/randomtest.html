@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Management Permissions Example</title>
+  <script>
+    // Request permission to manage windows
+    async function requestWindowManagementPermission() {
+      try {
+        await window.navigator.permissions.request({ name: 'window-management' });
+        console.log('Window management permission granted!');
+      } catch (error) {
+        console.error('Failed to request window management permission:', error);
+      }
+    }
+
+    // Check if window management permission is granted
+    async function checkWindowManagementPermission() {
+      try {
+        const permissionStatus = await window.navigator.permissions.query({ name: 'window-management' });
+        if (permissionStatus.state === 'granted') {
+          console.log('Window management permission is granted!');
+          // Run JavaScript in a targeted tab
+          const targetTab = window.open('https://example.com');
+          targetTab.addEventListener('load', () => {
+            targetTab.document.body.style.backgroundColor = 'lightblue';
+          });
+        } else {
+          console.log('Window management permission is not granted.');
+        }
+      } catch (error) {
+        console.error('Failed to check window management permission:', error);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Window Management Permissions Example</h1>
+  <button onclick="requestWindowManagementPermission()">Request Window Management Permission</button>
+  <button onclick="checkWindowManagementPermission()">Check Window Management Permission</button>
+</body>
+</html>
