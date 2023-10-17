@@ -1,7 +1,7 @@
 ## PATCHED AS OF V116- (unless you can run bookmarklets)
 NEW EXPLOIT FOUND BY BYPASSI!
 [bypassis new exploit](https://github.com/zek-c/Securly-Kill-V111/blob/main/bypassi.html)
-you can run this exploit at my website, [here](https://zekcurly.netlify.app/bypassi), or bypassis website [here](https://insecurly.bypassi.com)
+you can run this exploit at my website, [here](https://zekcurly.netlify.app/bypassi), or bypassis website [here](https://insecurly.bypassi.com) or codepen [here](https://codepen.io/zek-c/pen/JjwzvjZ)
 <hr>
 Hello ur prob here to disable dumb "secure"ly. lucky for you i have delivered. 
 
