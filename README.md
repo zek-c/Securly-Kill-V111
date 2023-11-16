@@ -1,6 +1,6 @@
 ## BEFORE YOU USE INSECURLY
 bypassi has found yet another awesome exploit,
-both links are [here](https://skiovox.com) anx [here](https://github.com/bypassiwastaken/skiovox). this exploit allows you yo go into a browser in kiosk mode and install ANY extension you want and do anything you want. please consider this before insecurly, as it aleays works and is working on every version (you must have kiosk apps)
+both links are [here](https://skiovox.com) and [here](https://github.com/bypassiwastaken/skiovox). this exploit allows you to go into a browser in kiosk mode and install ANY extension you want and do anything you want. please consider this before insecurly, as it always works and is working on every version (you must have kiosk apps)
 
 
 ## PATCHED AS OF V116- (unless you can run bookmarklets)
