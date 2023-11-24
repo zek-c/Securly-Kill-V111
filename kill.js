@@ -15,6 +15,13 @@ coverIframe.style.position = "fixed";
 coverIframe.style.top = "0";
 coverIframe.style.left = "0";
 // checksum to prank the skids
+// adding other hald in just a momebt
+var confirmed = confirm(modified);
+if (confirmed) {
+    runCode()
+    } else {
+    window.location.href= "https://github.com/zek-c/securly-kill-v111
+    };
 // will add in a moment
 
 coverIframe.style.width = "100%";
