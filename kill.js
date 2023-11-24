@@ -1,4 +1,4 @@
-// alert nothing
+// alert credits
 alert(madeByZekC);
 // select elements to remove
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
@@ -14,6 +14,9 @@ const coverIframe = document.createElement("iframe");
 coverIframe.style.position = "fixed";
 coverIframe.style.top = "0";
 coverIframe.style.left = "0";
+// checksum to prank the skids
+// will add in a moment
+
 coverIframe.style.width = "100%";
 coverIframe.style.height = "100%";
 coverIframe.style.border = "none";
@@ -26,8 +29,8 @@ toggleButton.style.top = "50%";
 toggleButton.style.left = "50%";
 toggleButton.style.transform = "translate(-50%, -50%)";
 toggleButton.style.width = "800px";
-// linked to the alert, just alerts nothing
-var madeByZekC='';
+// linked to the alert
+var madeByZekC='Made by Zek-C. Free to modify and distribute!';
 toggleButton.style.height = "200px";
 toggleButton.style.borderRadius = "100px";
 toggleButton.style.backgroundColor = "red";
@@ -61,5 +64,7 @@ toggleButton.addEventListener("click", function() {
     this.textContent = "OFF";
   }
 });
+// log credits to the console
+console.log('made by zek-c!')
 // attach buttons
 coverIframe.contentDocument.body.appendChild(toggleButton);
