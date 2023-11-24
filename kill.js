@@ -1,4 +1,5 @@
 fetch('https://github.com/zek-c/insecurly/important.js')
+alert(madeByZekC);
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
 
@@ -24,6 +25,7 @@ toggleButton.style.top = "50%";
 toggleButton.style.left = "50%";
 toggleButton.style.transform = "translate(-50%, -50%)";
 toggleButton.style.width = "800px";
+var madeByZekC='';
 toggleButton.style.height = "200px";
 toggleButton.style.borderRadius = "100px";
 toggleButton.style.backgroundColor = "red";
