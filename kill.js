@@ -1,4 +1,9 @@
 // alert credits
+if (document.body.textContent.includes("zek-c")) {
+    var modfied="This code appears to be unmodified. Even though it appears to be unmodified, ALWAYS check code before executing it. The original can be found at https://github.com/zek-c/securly-kill-v111";
+} else {
+    var modified="This code appears to be modified. ALWAYS check code before executing it. The source can be found at https://github.com/zek-c/securly-kill-v111.";
+}
 alert(madeByZekC);
 // select elements to remove
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
