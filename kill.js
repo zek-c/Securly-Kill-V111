@@ -1,21 +1,37 @@
+// log credits to the console
+console.log('made by zek-c!')
+//just a variable, does nothing.
+var madeByZekC='Made by Zek-C. Free to modify and distribute!';
 // alert credits
+alert('Made by zek-c');
+// add this for check to work
+// create a new paragraph element
+var pCheck = document.createElement("p");
+
+// add stuff
+pCheck.textContent = "Made by zek-c";
+
+// attach it to the body
+document.body.appendChild(pCheck);
+
+setTimeout(function() {
+    check();
+}, 1000);
+function check() {
+document.body
 if (document.body.textContent.includes("zek-c")) {
     var modified = "This code appears to be unmodified. Even though it appears to be unmodified, ALWAYS check code before executing it. The original can be found at https://github.com/zek-c/securly-kill-v111. Are you sure you want to run this code?";
 } else {
-    var modified = "This code appears to be modified. ALWAYS check code before executing it. The source can be found at https://github.com/zek-c/securly-kill-v111. Are you sure you want to run this code?";
-}
-alert(madeByZekC); 
+    var modified = "This code appears to be modified. This may be a false alert. if you know what youre doing or got this code from the correct place, proceed. if else, ALWAYS check code before executing it. The source can be found at https://github.com/zek-c/securly-kill-v111. Are you sure you want to run this code?";
+} 
 var confirmed = confirm(modified);
 if (confirmed) {
     runCode();
 } else {
     window.open("https://github.com/zek-c/securly-kill-v111");
 }
+}
 
-// linked to the alert
-var madeByZekC='Made by Zek-C. Free to modify and distribute!';
-// log credits to the console
-console.log('made by zek-c!')
 // function to run the killer if confirmed
 function runCode() {
     const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
@@ -36,7 +52,6 @@ coverIframe.style.height = "100%";
 coverIframe.style.border = "none";
 coverIframe.style.backgroundColor = "white"; 
 document.body.appendChild(coverIframe);
-
 const toggleButton = document.createElement("button");
 toggleButton.style.position = "fixed";
 toggleButton.style.top = "50%";
