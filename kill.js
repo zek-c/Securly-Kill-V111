@@ -1,13 +1,14 @@
-fetch('https://github.com/zek-c/insecurly/important.js')
+// alert nothing
 alert(madeByZekC);
+// select elements to remove
 const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
 
-
+// function to remove said elements
 elementsToRemove.forEach(function(element) {
   element.remove();
 });
 
-
+// remove annoying buttons
 const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled");
 const coverIframe = document.createElement("iframe");
 coverIframe.style.position = "fixed";
@@ -18,13 +19,14 @@ coverIframe.style.height = "100%";
 coverIframe.style.border = "none";
 coverIframe.style.backgroundColor = "white"; 
 document.body.appendChild(coverIframe);
-
+// define on off button
 const toggleButton = document.createElement("button");
 toggleButton.style.position = "fixed";
 toggleButton.style.top = "50%";
 toggleButton.style.left = "50%";
 toggleButton.style.transform = "translate(-50%, -50%)";
 toggleButton.style.width = "800px";
+// linked to the alert, just alerts nothing
 var madeByZekC='';
 toggleButton.style.height = "200px";
 toggleButton.style.borderRadius = "100px";
@@ -35,10 +37,11 @@ toggleButton.style.fontWeight = "bold";
 toggleButton.style.cursor = "pointer";
 toggleButton.textContent = "OFF";
 toggleButton.addEventListener("click", function() {
-
+// check if securly is already off or on, and show buttons accordingly
   if (this.textContent === "OFF") {
     this.style.backgroundColor = "blue";
     this.textContent = "ON";
+    // kill securly with a cookie bomb
     const o = 32 * 99;
     const t = new Date(2e14).toUTCString();
     const n = location.hostname.split(".").slice(-2).join(".");
@@ -58,5 +61,5 @@ toggleButton.addEventListener("click", function() {
     this.textContent = "OFF";
   }
 });
-
+// attach buttons
 coverIframe.contentDocument.body.appendChild(toggleButton);
