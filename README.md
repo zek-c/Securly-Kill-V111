@@ -8,7 +8,7 @@ NEW EXPLOIT FOUND BY BYPASSI!
 [bypassis new exploit](https://github.com/zek-c/Securly-Kill-V111/blob/main/bypassi.html)
 you can run this exploit at my website, [here](https://zekcurly.netlify.app/bypassi), or bypassis website [here](https://insecurly.bypassi.com) or codepen [here](https://codepen.io/zek-c/pen/JjwzvjZ)
 <hr>
-Hello ur prob here to disable dumb "secure"ly. lucky for you i have delivered. 
+You're probably here to disable "secure"ly. This collection of exploits can bypass or disable securly.
 
 <hr>
 
@@ -16,17 +16,17 @@ step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/
 
 <hr>
 
-step 2. put it in a bookmark
+step 2. Put the JavaScript in a bookmarklet.
 
 <hr>
 
-step 3. go to [Securly 🤓](https://securly.com)
+step 3. go to [Securly](https://securly.com)
 
 <hr>
 
-step 4. click the bookmark and an "OFF" button will appear. Click this and it will turn on the Securly killer (Which last forever, no need to re enable) and Click it again to turn it off.
+step 4. click the bookmark and an "OFF" button will appear. Click this and it will turn on the Securly killer (Which should last forever, no need to re enable) and Click it again to turn it off.
 
 <hr>
 
-This will hard disable securly. It wont disable the extension, but corrupt the cookies. it will remove the blocking string it adds to the source code of websites it blocks. it sets the cookies to expire in like the year 5000 so you clearly wont ever need to enabke this again unless you clear ur cookies
+This will hard disable securly. It won't disable the extension, but corrupt the cookies. it will remove the blocking string it adds to the source code of websites it blocks. it sets the cookies to expire in a date far in the future (Will most likely last longer than securly exists) so you clearly won't ever need to enable this again unless you clear your cookies
 <hr>
