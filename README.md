@@ -1,3 +1,5 @@
+# as of ChromeOS V119, all of these methods are patched. use [caub](https://caub.glitch.me/old) to stop updates or [downgrade](https://chrome100.dev) to keep these exploits working
+<hr>
 ## BEFORE YOU USE INSECURLY
 bypassi has found yet another awesome exploit,
 both links are [here](https://skiovox.com) and [here](https://github.com/bypassiwastaken/skiovox-helper). this exploit allows you to go into a browser in kiosk mode and install ANY extension you want and do anything you want. please consider this before insecurly, as it always works and is working on every version (you must have kiosk apps)
