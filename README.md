@@ -2,7 +2,7 @@
 <hr>
 usage instructions: 
 <hr>
-    Head to [dragons vercel](https://caudns.vercel.app) or my [mirror](https://zekcurly.netlify.app/caudns.html])
+    Head to <a href="https://caub.vercel.app">Dragon's Vercel</a> or my <a href="https://zekcurly.netlify.app/cauDNS.html">mirror</a>
     <hr>
         head to *chrome://network#state*, and expand your most commonly used wifi networks then copy the contents, from open bracket *{* to closed bracket *}*
         <hr> 
@@ -13,7 +13,7 @@ usage instructions:
 <hr>
 ## BEFORE YOU USE INSECURLY
 bypassi has found yet another awesome exploit,
-both links are [here](https://skiovox.com) and [here](https://github.com/bypassiwastaken/skiovox-helper). this exploit allows you to go into a browser in kiosk mode and install ANY extension you want and do anything you want. please consider this before insecurly, as it always works and is working on every version (you must have kiosk apps)
+both links are <a href="https://skiovox.com">here</a> and <a href="https://github.com/bypassiwastaken/skiovox-helper">here</a>. this exploit allows you to go into a browser in kiosk mode and install ANY extension you want and do anything you want. please consider this before insecurly, as it always works and is working on every version (you must have kiosk apps)
 
 
 ## PATCHED AS OF V116- (unless you can run bookmarklets)
