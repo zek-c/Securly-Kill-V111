@@ -2,7 +2,7 @@
 <br>
 usage instructions: 
 <hr>
-    Head to <a href="https://caub.vercel.app">Dragon's Vercel</a> or my <a href="https://zekcurly.netlify.app/cauDNS.html">mirror</a>
+    Head to <a href="https://caudns.vercel.app">Dragon's Vercel</a> or my <a href="https://zekcurly.netlify.app/cauDNS.html">mirror</a>
     <hr>
         head to chrome://network#state, and expand your most commonly used wifi networks then copy the contents
         <hr> 
