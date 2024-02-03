@@ -1,14 +1,14 @@
-## NEW EXPLOIT (by [dragon731012](https://github.com/dragon731012)), (cauDNS!)[https://github.com/dragon731012/caudns]
+## NEW EXPLOIT (by [dragon731012](https://github.com/dragon731012)), [cauDNS!](https://github.com/dragon731012/caudns)
 <hr>
 usage instructions: 
-<br>
-    head to (dragons vercel)[https://caudns.vercel.app] or my (mirror)[https://zekcurly.netlify.app/caudns.html] 
-    <br>
-        head to _chrome://network#state_, and expand your most commonly used wifi networks then copy the contents, from open bracket { to closed bracket }
-        <br> 
-            paste it into the input field and generate the file, then import it at the bottom of chrome://network#general
-            <br>
-___that should be it, you've successfully blocked multiple extensions___
+<hr>
+    Head to [dragons vercel](https://caudns.vercel.app) or my [mirror](https://zekcurly.netlify.app/caudns.html])
+    <hr>
+        head to *chrome://network#state*, and expand your most commonly used wifi networks then copy the contents, from open bracket *{* to closed bracket *}*
+        <hr> 
+            Paste contents into the input field, and generate the file, then import it at the bottom of *chrome://network#general*
+            <hr>
+*that should be it, you've successfully blocked multiple extensions*
 # as of ChromeOS V119, all of these below methods are patched. use [caub](https://caub.glitch.me/old) to stop updates or [downgrade](https://chrome100.dev) to keep these exploits working
 <hr>
 ## BEFORE YOU USE INSECURLY
