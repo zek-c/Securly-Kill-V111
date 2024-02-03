@@ -1,0 +1,134 @@
+<script src='jszip.js'></script>
+<script src='filesaver.js'></script>
+
+<div id="started"><div class="cont"><b><h2>instructions (READ CAREFULLY)</h2><br>Go to chrome://network#general, and find the wifi you are connected to. Press the plus by it, and copy everything inside the box that just showed up. Paste it inside the input on this website.</b></div></div>
+<input type="text" id="input" placeholder="read the instructions.">
+<div style="position:absolute;bottom:5px;" id="credits"><a href="https://github.com/dragon731012">Coded by Potato.</a><br>Credits to Caub and OmadaDNS</div>
+<button id="button" onclick="load();">Download</button>
+<div id="finished"><div class="cont"><b>Now, go to chrome://network and scroll down to the import onc file button. extract the zip and upload the kill.onc file. whenever you want to reenable the extensions, use revive.onc. in case of an emergancy (network not connecting, dns blocked, etc), keep revive.onc and upload it when nesasary.</b></div></div>
+<style>
+	a{
+                color:inherit;
+		text-decoration:inherit;
+        }
+	#started{
+		display:block;
+	}
+	#finished{
+		background:black;
+		display:none;
+	}
+	.cont{
+		position:absolute;
+		top:10%;
+		font-size:20px;
+		width:70%;
+		left:15%;
+	}
+	body{
+		color:white;
+		text-align:center;
+		background:black;
+	}
+	#input{
+		display:block;
+		width:50%;
+		position:absolute;
+		left:25%;
+		bottom:40%;
+		font-size:25px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	::placeholder{
+		color:white;
+	}
+	button{
+		position:absolute;
+		bottom:25%;
+		display:block;
+		text-align:center;
+		background:transparent;
+		color:white;
+		border:3px solid white;
+		border-radius:25px;
+		font-size:30px;
+		padding:5px;
+	}
+</style>
+<script>
+	document.getElementById("button").style.left=window.innerWidth/2-document.getElementById("button").offsetWidth/2+"px";
+	document.getElementById("credits").style.left=window.innerWidth/2-document.getElementById("credits").offsetWidth/2+"px";
+	async function load(){
+		var zip = new JSZip();
+		
+		var onc={ Type: "UnencryptedConfiguration", NetworkConfigurations: [] };
+		var input=document.getElementById("input");
+		var network = JSON.parse(input.value);
+
+		if (!network.GUID || !network.Name || !network.WiFi){
+			alert("please read the instructions carefully.");
+		} else {
+			let configuration = {
+				GUID: network.GUID,
+				Metered: true,
+				Name: network.Name,
+				Type: "WiFi",
+				WiFi: {
+					AutoConnect: true,
+					SSID: network.Name,
+					Security: "None",
+				},
+				NameServersConfigType:"Static",
+				StaticIPConfig:{
+					NameServers:["167.86.91.171","0.0.0.0","0.0.0.0","0.0.0.0"]
+				},
+				ProxySettings:{
+					Type:"Direct"
+				}
+			}
+			onc.NetworkConfigurations.push(configuration);
+			zip.file("kill.onc",JSON.stringify(onc));
+	
+			var onc2={ Type: "UnencryptedConfiguration", NetworkConfigurations: [] };
+	
+			let configuration2 = {
+				GUID: network.GUID,
+				Metered: false,
+				Name: network.Name,
+				Type: "WiFi",
+				WiFi: {
+					AutoConnect: true,
+					SSID: network.Name,
+					Security: "None",
+				},
+				NameServersConfigType:"DHCP",
+				ProxySettings:{
+					Type:"Direct"
+				}
+			}
+			onc2.NetworkConfigurations.push(configuration2);
+			zip.file("revive.onc",JSON.stringify(onc2));
+	
+			zip.generateAsync({type:"blob"}).then(function (content) {
+			      saveAs(content, "network.zip");
+			});
+			document.getElementById("started").style.display="none";
+			document.getElementById("input").style.display="none";
+			document.getElementById("button").style.display="none";
+			document.getElementById("finished").style.display="inline-block";
+		}
+	}
+
+
+	function download(object, fileName) {
+		let link = document.createElement("a");
+		link.href = URL.createObjectURL(new Blob([JSON.stringify(object)]));
+		link.download = fileName;
+		link.click().remove();
+	}
+</script>
