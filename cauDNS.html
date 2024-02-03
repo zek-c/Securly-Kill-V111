@@ -1,12 +1,79 @@
 <script src='/assets/jszip.js'></script>
 <script src='/assets/filesaver.js'></script>
 
-<div id="started"><div class="cont"><b><h2>instructions (READ CAREFULLY)</h2><br>Go to chrome://network#state, and find the wifi you are most commonly connected to. Press the plus by it, and copy everything inside the box that just showed up. Paste it inside the input on this website.</b></div></div>
+<div id="started"><div class="cont"><b><h2>instructions (READ CAREFULLY)</h2><br>Go to chrome://network#state, and find the wifi you are connected to. Press the plus by it, and copy everything inside the box that just showed up. Paste it inside the input on this website.</b></div></div>
 <input type="text" id="input" placeholder="read the instructions.">
-<div style="position:absolute;bottom:5px;" id="credits"><a href="https://github.com/dragon731012">Coded by Potato.</a><br>Credits to Caub and OmadaDNS</div>
+<div style="position:absolute;bottom:5px;z-index:99999;" id="credits"><a href="https://github.com/dragon731012">Coded by Potato.</a><br>Credits to Caub and OmadaDNS</div>
 <button id="button" onclick="load();">Download</button>
 <div id="finished"><div class="cont"><b>Now, go to chrome://network and scroll down to the import onc file button. extract the zip and upload the kill.onc file. whenever you want to reenable the extensions, use revive.onc. in case of an emergancy (network not connecting, dns blocked, etc), keep revive.onc and upload it when nesasary.</b></div></div>
+<div id="advancedbutton" onclick="adv();">Advanced +</div>
+<div id="advanced" data-pos="down" style="border-top:3px solid white;animation-fill-mode: both;display:block;text-align:center;flex-direction: column;align-items:center;">
+	<div class="switchtext">
+		<b style="display:flex;font-size:20px;padding-right:10px;">caub - </b>
+		<label class="switch" style="display:flex;">
+		  <input type="checkbox" id="caub" checked>
+		  <span class="slider round"></span>
+		</label>
+	</div>
+	<div class="switchtext" style="flex-direction: column;">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip1" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip2" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip3" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip4" placeholder="enter ip" type="text">
+	</div>
+	<!--
+	<div class="switchtext">
+		<b style="display:flex;font-size:20px;padding-right:10px;">proxy - </b>
+		<select name="proxy" id="proxy">
+		  <option value="direct">Direct</option>
+		  <option value="ftp">ftp</option>
+		  <option value="http">http</option>
+		  <option value="https">https</option>
+		</select>
+	</div>
+	<div id="proxysettings" class="switchtext" style="display:none;">
+		<input class="smallinput" id="hostinput" placeholder="localhost" type="text">
+		<input id="portinput" placeholder="port" type="text">
+	</div>
+	-->
+</div>
 <style>
+	.smallinput{
+		width:25%;
+		font-size:15px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	#portinput{
+		width:10%;
+		font-size:15px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	#proxy{
+		display: flex;
+		color: white;
+	    	background-color: black;
+	    	border: 3px solid white;
+	    	border-radius: 25px;
+	    	outline: none;
+	}
+	.switchtext{
+		display:flex;
+		flex-direction: row;
+		align-items:center;
+		color:white;
+		justify-content:center;
+		margin:50px;
+	}
 	a{
                 color:inherit;
 		text-decoration:inherit;
@@ -20,7 +87,7 @@
 	}
 	.cont{
 		position:absolute;
-		top:10%;
+		top:5%;
 		font-size:20px;
 		width:70%;
 		left:15%;
@@ -29,14 +96,77 @@
 		color:white;
 		text-align:center;
 		background:black;
+		overflow:hidden;
 	}
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 53px;
+    		height: 28px;
+		border: 5px solid white;
+		border-radius:25px;
+	}
+	
+	.switch input { 
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: transparent;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	
+	.slider:before {
+		position: absolute;
+		content: "";
+	 	height: 20px;
+	 	width: 20px;
+	  	left: 4px;
+	  	bottom: 4px;
+	  	background-color: white;
+	  	-webkit-transition: .4s;
+	  	transition: .4s;
+	}
+	
+	input:checked + .slider {
+	  	background:transparent;
+	}
+	
+	input:focus + .slider {
+	  	box-shadow: 0 0 1px #2196F3;
+	}
+	
+	input:checked + .slider:before {
+	  	-webkit-transform: translateX(26px);
+	  	-ms-transform: translateX(26px);
+	  	transform: translateX(26px);
+	}
+	
+	.slider.round {
+	  	border-radius: 34px;
+		outline: none;
+	}
+	
+	.slider.round:before {
+	  	border-radius: 50%;
+	}
+	
 	#input{
 		display:block;
 		width:50%;
 		position:absolute;
 		left:25%;
-		bottom:40%;
-		font-size:25px;
+		bottom:48%;
+		font-size:20px;
 		text-align:left;
 		background:transparent;
 		color:white;
@@ -49,24 +179,120 @@
 	}
 	button{
 		position:absolute;
-		bottom:25%;
+		bottom:32%;
 		display:block;
 		text-align:center;
 		background:transparent;
 		color:white;
 		border:3px solid white;
 		border-radius:25px;
-		font-size:30px;
-		padding:5px;
+		font-size:20px;
+		padding:8.5px;
+	}
+	#advancedbutton{
+		position:absolute;
+		top:5px;
+		left:5px;
+		display:block;
+		text-align:center;
+		background:black;
+		color:white;
+		font-size:15px;
+		cursor:pointer;
+		z-index:15;
+	}
+	#advanced{
+		width:100%;
+		height:100%;
+		position:absolute;
+		background-color:black;
+		top:100%;
+		left:0px;
+		z-index:10;
+	}
+	@keyframes slideup{
+		0%{
+			top:100%;
+		}
+		100%{
+			top:0%;
+		}
+	}
+	@keyframes slidedown{
+		0%{
+			top:0%;
+		}
+		100%{
+			top:100%;
+		}
 	}
 </style>
 <script>
+	var dns="167.86.91.171";	
+	document.getElementById("ip1").value=dns;
+	document.getElementById("ip2").value="0.0.0.0";
+	document.getElementById("ip3").value="0.0.0.0";
+	document.getElementById("ip4").value="0.0.0.0";
+
+	/*
+	var proxysettings=document.getElementById("proxysettings");
+	var proxy=document.getElementById("proxy");
+	proxy.onchange=function (){
+		if (proxy.value!="direct"){
+			proxysettings.style.display="flex";
+		} else {
+			proxysettings.style.display="none";
+		}
+	}
+	*/
+ 
+	var advanced=document.getElementById("advanced");
+	advanced.addEventListener("animationend",()=>{
+		advanced.style.animation="none";
+		inprogress=false;
+		if (advanced.dataset.pos=="up"){
+			advanced.style.top="0%";
+			document.getElementById("advancedbutton").innerText="Advanced -";
+		} else if (advanced.dataset.pos=="down"){
+			document.getElementById("advancedbutton").innerText="Advanced +";
+			advanced.style.top="100%";
+		} else {
+			alert("error");
+		}
+	});
+	var inprogress=false;
+	function adv(){
+		if (inprogress==false){
+			inprogress=true;
+			if (advanced.dataset.pos=="down"){
+				advanced.style.animation="0.5s linear slideup";
+				advanced.dataset.pos="up";
+			} else if (advanced.dataset.pos=="up"){
+				advanced.style.animation="0.5s linear slidedown";
+				advanced.dataset.pos="down";
+			} else {
+				alert("error");
+			}
+		}
+	}
+	
 	document.getElementById("button").style.left=window.innerWidth/2-document.getElementById("button").offsetWidth/2+"px";
 	document.getElementById("credits").style.left=window.innerWidth/2-document.getElementById("credits").offsetWidth/2+"px";
 	async function load(){
 		var zip = new JSZip();
 		
 		var onc={ Type: "UnencryptedConfiguration", NetworkConfigurations: [] };
+		var nameservers=[document.getElementById("ip1").value,document.getElementById("ip2").value,document.getElementById("ip3").value,document.getElementById("ip4").value];
+		for (var i=0;i<4;i++){
+			if (i==0){
+				if (nameservers[i]==""){
+					nameservers[i]=dns;
+				}
+			}
+			if (nameservers[i]==""){
+				nameservers[i]="0.0.0.0";
+			}
+		}
 		var input=document.getElementById("input");
 		var network = JSON.parse(input.value);
 
@@ -75,7 +301,7 @@
 		} else {
 			let configuration = {
 				GUID: network.GUID,
-				Metered: true,
+				Metered: document.getElementById("caub").checked,
 				Name: network.Name,
 				Type: "WiFi",
 				WiFi: {
@@ -85,7 +311,7 @@
 				},
 				NameServersConfigType:"Static",
 				StaticIPConfig:{
-					NameServers:["167.86.91.171","0.0.0.0","0.0.0.0","0.0.0.0"]
+					NameServers:nameservers
 				},
 				ProxySettings:{
 					Type:"Direct"
@@ -121,6 +347,8 @@
 			document.getElementById("input").style.display="none";
 			document.getElementById("button").style.display="none";
 			document.getElementById("finished").style.display="inline-block";
+			document.getElementById("advanced").style.display="none";
+			document.getElementById("advancedbutton").style.display="none";
 		}
 	}
 
