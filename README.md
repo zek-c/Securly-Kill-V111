@@ -2,7 +2,7 @@
 <br>
 usage instructions: 
 <hr>
-    Head to <a href="https://caudns.vercel.app">Dragon's Vercel</a> or my <a href="https://zekcurly.netlify.app/cauDNS.html">mirror</a>
+    Head to <a href="https://caudns.vercel.app">Dragon's Vercel</a> or my <a href="https://zekurly.netlify.app/cauDNS.html">mirror</a>
     <hr>
         head to chrome://network#state, and expand your most commonly used wifi networks then copy the contents
         <hr> 
@@ -22,13 +22,13 @@ both links are <a href="https://skiovox.com">here</a> and <a href="https://githu
 ## PATCHED AS OF V116- (unless you can run bookmarklets)
 NEW EXPLOIT FOUND BY BYPASSI!
 [bypassis new exploit](https://github.com/zek-c/Securly-Kill-V111/blob/main/bypassi.html)
-you can run this exploit at my website, [here](https://zekcurly.netlify.app/bypassi), or bypassis website [here](https://insecurly.bypassi.com) or codepen [here](https://codepen.io/zek-c/pen/JjwzvjZ)
+you can run this exploit at my website, [here](https://zekurly.netlify.app/bypassi), or bypassis website [here](https://insecurly.bypassi.com) or codepen [here](https://codepen.io/zek-c/pen/JjwzvjZ)
 <hr>
 You're probably here to disable "secure"ly. This collection of exploits can bypass or disable securly.
 
 <hr>
 
-step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/blob/main/bookmarklet.js) or go to [My Website](https://zekcurly.netlify.app) for easy drag and drop to bookmarks bar
+step 1. get the bookmarklet [here](https://github.com/zek-c/extension-v111-kill/blob/main/bookmarklet.js) or go to [My Website](https://zekurly.netlify.app) for easy drag and drop to bookmarks bar
 
 <hr>
 
