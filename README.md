@@ -1,3 +1,7 @@
+# state of the repo
+
+lately as you can tell, there has been little to no pushes. the exploit community is running dry and there is no new content. theres no longer much to update. this repository "may" be archived in the coming months.
+
 ## NEW EXPLOIT (by [dragon731012](https://github.com/dragon731012)), [cauDNS!](https://github.com/dragon731012/caudns)
 <br>
 usage instructions: 
