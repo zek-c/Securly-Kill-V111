@@ -1,3 +1,6 @@
+# how to "un~~en~~roll" (complicated)
+If you're intrested in unrolling your cb, (which is dangerous and sometimes ~~illegal~~, see [unroll.md](https://github.com/zek-c/securly-kill-v111/unroll.md)
+
 # state of the repo
 
 lately as you can tell, there has been little to no pushes. the exploit community is running dry and there is no new content. theres no longer much to update. this repository "may" be archived in the coming months.
