@@ -1,3 +1,6 @@
+# readme!!!
+this repository has reached its end, after like idk 1 and a half years of constant updates, the community has slowed down and new exploits are months apart. if you need contact, email me at stanleygriffin99@gmail.com (do not question the email.) the repository will be permanently archived and my journey will continue another year or something. (its also draining dealing with issues, asking for updates, and overall maintaining repositories alone.) if you want to join the team just make a business inquiry with your skills and maybe we could actually do something.
+
 # how to "un~~en~~roll" (complicated)
 If you're intrested in unrolling your cb, (which is dangerous and sometimes ~~illegal~~, see [unroll.md](https://github.com/zek-c/securly-kill-v111/unroll.md)
 
